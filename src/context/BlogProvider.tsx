@@ -4,6 +4,7 @@ import { api } from "../lib/axios";
 export interface GitHubUserProfileProps {
   login: string;
   avatar_url: string;
+  bio: string;
 }
 
 interface BlogContextProps {
