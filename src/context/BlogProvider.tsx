@@ -5,6 +5,7 @@ export interface GitHubUserProfileProps {
   login: string;
   avatar_url: string;
   bio: string;
+  following: number;
 }
 
 interface BlogContextProps {
