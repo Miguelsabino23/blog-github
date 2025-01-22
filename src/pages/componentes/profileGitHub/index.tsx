@@ -1,6 +1,7 @@
-import { GithubLogo } from "@phosphor-icons/react";
+import { GithubLogo, LinkedinLogo, Users } from "@phosphor-icons/react";
 import { useBlogContext } from "../../../hooks/useBlogContext";
 import {
+  IconProfile,
   ProfileGitHubContainer,
   ProfileSocialMedia,
   ProfileUser,
@@ -10,7 +11,7 @@ export function ProfileGitHub() {
   const userProfile = useBlogContext();
 
   if (!userProfile) {
-    return <div>Loading...</div>; // Garantir que o perfil esteja carregado
+    return <div>Loading...</div>;
   }
 
   return (
@@ -23,12 +24,22 @@ export function ProfileGitHub() {
           <ul>
             <li>
               <a href={`https://github.com/${userProfile.login}`}>
-                <GithubLogo />
+                <IconProfile>
+                  <GithubLogo weight='fill' color='#071422' />
+                </IconProfile>
                 GitHub
               </a>
             </li>
-            <li></li>
-            <li></li>
+            <li>
+              <a href='in/miguel-sabino-38a738231'>
+                <LinkedinLogo />
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <Users color='#C4D4E3' />
+              <span>{userProfile.following}</span>
+            </li>
           </ul>
         </ProfileSocialMedia>
       </ProfileUser>
