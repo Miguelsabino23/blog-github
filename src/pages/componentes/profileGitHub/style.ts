@@ -33,17 +33,35 @@ export const ProfileSocialMedia = styled.div`
   ul {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     list-style: none;
 
     li {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+
       a {
         display: flex;
         align-items: center;
+        gap: 0.4rem;
 
         text-decoration: none;
         color: ${(props) => props.theme["base_subtitle"]};
       }
+
+      color: ${(props) => props.theme["base_subtitle"]};
     }
   }
+`;
+
+export const IconProfile = styled.div`
+  display: flex;
+  align-items: center;
+
+  padding: 0.1rem;
+  border-radius: 50%;
+
+  background-color: ${(props) => props.theme["base_label"]};
 `;
