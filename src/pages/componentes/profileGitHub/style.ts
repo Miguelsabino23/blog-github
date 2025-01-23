@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const ProfileGitHubContainer = styled.div`
-  max-width: 40rem;
+  max-width: 50rem;
   margin: -5rem auto 0 auto;
   display: flex;
-  background-color: ${(props) => props.theme["base_background"]};
+  background-color: ${(props) => props.theme["base_profile"]};
   padding: 32px 40px;
   position: relative;
   border-radius: 10px;
@@ -21,8 +21,24 @@ export const ProfileUser = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  h2 {
-    color: ${(props) => props.theme["base_title"]};
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      text-decoration: none;
+      font-weight: bold;
+      color: ${(props) => props.theme["blue"]};
+    }
+
+    h2 {
+      color: ${(props) => props.theme["base_title"]};
+    }
   }
   p {
     color: ${(props) => props.theme["base_text"]};
@@ -33,7 +49,7 @@ export const ProfileSocialMedia = styled.div`
   ul {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 2rem;
 
     list-style: none;
 
