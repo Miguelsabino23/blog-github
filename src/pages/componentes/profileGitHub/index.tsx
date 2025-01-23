@@ -1,4 +1,9 @@
-import { GithubLogo, LinkedinLogo, Users } from "@phosphor-icons/react";
+import {
+  ArrowSquareOut,
+  GithubLogo,
+  LinkedinLogo,
+  Users,
+} from "@phosphor-icons/react";
 import { useBlogContext } from "../../../hooks/useBlogContext";
 import {
   IconProfile,
@@ -18,14 +23,20 @@ export function ProfileGitHub() {
     <ProfileGitHubContainer>
       <img src={userProfile.avatar_url} alt='Avatar' />
       <ProfileUser>
-        <h2>{userProfile.login}</h2>
+        <div>
+          <h2>{userProfile.login}</h2>
+          <a href=''>
+            GITHUB
+            <ArrowSquareOut weight='fill' />
+          </a>
+        </div>
         <p>{userProfile.bio}</p>
         <ProfileSocialMedia>
           <ul>
             <li>
               <a href={`https://github.com/${userProfile.login}`}>
                 <IconProfile>
-                  <GithubLogo weight='fill' color='#071422' />
+                  <GithubLogo weight='fill' color='#0B1B2B' />
                 </IconProfile>
                 GitHub
               </a>
